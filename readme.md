@@ -5,7 +5,7 @@ A linguagem Dart é uma linguagem de programação de alto nível, projetada pri
 
 Dart é uma linguagem que oferece a opção de tipagem estática ou dinâmica, o que significa que você pode optar por definir ou não o tipo da variável. Vou explicar ambos os cenários:
 
-* Tipagem Estática (Definindo o Tipo da Variável):
+### Tipagem Estática (Definindo o Tipo da Variável):
   
 Quando você deseja criar uma variável com tipagem estática, primeiro define o tipo da variável e, em seguida, atribui um valor a ela. Aqui está um exemplo:
 
@@ -17,7 +17,7 @@ Quando você deseja criar uma variável com tipagem estática, primeiro define o
       }
 
 
-* Tipagem Dinâmica (Inferência de Tipo):
+### Tipagem Dinâmica (Inferência de Tipo):
   
 No Dart, você também pode usar a tipagem dinâmica, o que significa que a linguagem inferirá automaticamente o tipo da variável com base no valor atribuído a ela. Aqui está um exemplo:
 
@@ -32,3 +32,27 @@ No Dart, você também pode usar a tipagem dinâmica, o que significa que a ling
 ## Operadores lógicos:
 
 Em Dart, assim como em muitas outras linguagens de programação, os operadores lógicos são usados para realizar operações de lógica booleana em valores booleanos (verdadeiro ou falso). Existem três operadores lógicos principais: && (E lógico), || (OU lógico) e ! (NÃO lógico). Vou explicar cada um deles:
+
+### Operador "E" Lógico (&&):
+
+O operador && é usado para combinar duas expressões booleanas. Ele retorna true apenas se ambas as expressões forem verdadeiras. Se pelo menos uma das expressões for falsa, o resultado será false. Aqui está um exemplo:
+
+        bool a = true;
+        bool b = false;
+        bool resultado = a && b;
+
+### Operador OU Lógico (||):
+
+O operador || é usado para combinar duas expressões booleanas. Ele retorna true se pelo menos uma das expressões for verdadeira. O resultado será false somente se ambas as expressões forem falsas. Veja um exemplo
+
+        bool c = true;
+        bool d = false;
+        bool resultado = c || d; 
+
+### Operador NÃO Lógico (!):
+
+O operador ! é usado para negar o valor de uma expressão booleana. Se a expressão original for verdadeira, ! a torna falsa, e vice-versa. Aqui está um exemplo:
+
+        bool e = true;
+        bool resultado = !e; 
+
