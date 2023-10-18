@@ -36,23 +36,30 @@ Em Dart, assim como em muitas outras linguagens de programação, os operadores 
 ### Operador "E" Lógico (&&):
 
 O operador && é usado para combinar duas expressões booleanas. Ele retorna true apenas se ambas as expressões forem verdadeiras. Se pelo menos uma das expressões for falsa, o resultado será false. Aqui está um exemplo:
-
+      void main(){
         bool a = true;
         bool b = false;
         bool resultado = a && b;
+        print(resultado);
+      }
 
-### Operador OU Lógico (||):
+### Operador OU Lógico (|):
 
-O operador || é usado para combinar duas expressões booleanas. Ele retorna true se pelo menos uma das expressões for verdadeira. O resultado será false somente se ambas as expressões forem falsas. Veja um exemplo
+O operador | é usado para combinar duas expressões booleanas. Ele retorna true se pelo menos uma das expressões for verdadeira. O resultado será false somente se ambas as expressões forem falsas. Veja um exemplo
 
+      void main(){
         bool c = true;
         bool d = false;
-        bool resultado = c || d; 
+        bool resultado = c | d; 
+        print(resultado);
+      }
 
 ### Operador NÃO Lógico (!):
 
 O operador ! é usado para negar o valor de uma expressão booleana. Se a expressão original for verdadeira, ! a torna falsa, e vice-versa. Aqui está um exemplo:
 
+      void main(){
         bool e = true;
-        bool resultado = !e; 
-
+        bool resultado = !e;
+        print(resultado); 
+      }
