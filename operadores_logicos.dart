@@ -6,9 +6,9 @@ void main(){
   bool resultado1 = a && b;
   print(resultado1);
 
-  bool c = true;
-  bool d = false;
-  bool resultado2 = c | d;
+  bool c = false;
+  bool d = true;
+  bool resultado2 = c || d;
   print(resultado2);
 
   bool e = true;

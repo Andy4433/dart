@@ -46,12 +46,12 @@ O operador && é usado para combinar duas expressões booleanas. Ele retorna tru
 
 ### Operador OU Lógico (|):
 
-O operador | é usado para combinar duas expressões booleanas. Ele retorna true se pelo menos uma das expressões for verdadeira. O resultado será false somente se ambas as expressões forem falsas. Veja um exemplo
+O operador || é usado para combinar duas expressões booleanas. Ele retorna true se pelo menos uma das expressões for verdadeira. O resultado será false somente se ambas as expressões forem falsas. Veja um exemplo
 
       void main(){
         bool c = true;
         bool d = false;
-        bool resultado = c | d; 
+        bool resultado = c || d; 
         print(resultado);
       }
 
