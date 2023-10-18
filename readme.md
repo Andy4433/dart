@@ -135,6 +135,7 @@ Dart oferece a capacidade de lidar com exceções usando try, catch, e finally. 
           }
 
 Menssagem esperada: 
+
 Ocorreu uma exceção: IntegerDivisionByZeroException
 Bloco finally sempre é executado, independentemente de exceções
 
