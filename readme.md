@@ -116,7 +116,7 @@ Switch: O switch é usado para fazer uma escolha entre várias opções com base
           }
         }
 
-### Estrutura de Controle de Exceções:
+## Erro e Exceções:
 
 Dart oferece a capacidade de lidar com exceções usando try, catch, e finally. Isso permite que você trate erros e exceções de forma controlada.
 
@@ -139,3 +139,121 @@ Menssagem esperada:
 Ocorreu uma exceção: IntegerDivisionByZeroException
 Bloco finally sempre é executado, independentemente de exceções
 
+## operadores tenario
+
+Esses operadores permitem que você avalie uma expressão e retorne um valor com base em uma condição. Em Dart, o operador ternário tem a seguinte sintaxe:
+
+### sintaxe:
+
+          condicao ? valor_se_verdadeiro : valor_se_falso;
+
+* condicao: É a expressão que você deseja avaliar. Se essa expressão for verdadeira, o valor à esquerda do ? é retornado; caso contrário, o valor à direita do : é retornado.
+
+* valor_se_verdadeiro: É o valor retornado se a condição for verdadeira.
+
+* valor_se_falso: É o valor retornado se a condição for falsa.
+
+### exemplo:
+          void main(){
+            bool condicao = true;
+            String mensagem = condicao ? "Verdadeiro" : "Falso";
+            print(mensagem); // Isso imprimirá "Verdadeiro"
+          }
+
+### exemplo 2-Atribuição de Variável:
+
+          void main(){
+            int numero = 10;
+            String resultado = numero > 5 ? "Maior que 5" : "Menor ou igual a 5";
+            print(resultado); // Isso imprimirá "Maior que 5"
+          }
+
+### exemplo 3-Uso em Expressões:
+
+          void main(){
+            int a = 5;
+            int b = 10;
+            int maiorNumero = a > b ? a : b;
+            print("O maior número é $maiorNumero"); // Isso imprimirá "O maior número é 10"
+          }
+
+Os operadores ternários são úteis para simplificar expressões condicionais pequenas e tornar o código mais conciso. No entanto, é importante usá-los com moderação, pois o uso excessivo de operadores ternários em expressões complexas pode tornar o código menos legível.
+
+## loops:
+
+Dart oferece três principais estruturas de loop: for, while e do-while, que permitem que você controle o fluxo de execução do seu programa. Aqui está uma explicação de cada uma delas
+
+### while:
+
+O loop while executa um conjunto de instruções enquanto uma condição for verdadeira. É usado quando o número de iterações não é conhecido antecipadamente.
+
+Sintaxe:
+
+          while (condição) {
+            // Código a ser repetido enquanto a condição for verdadeira
+          }
+
+condição: A condição é uma expressão que é avaliada no início de cada iteração do loop. Enquanto a condição for verdadeira, o loop continuará a ser executado. Se a condição for falsa, o loop será encerrado.
+
+// Código a ser repetido enquanto a condição for verdadeira: Este é o bloco de código que será executado a cada iteração do loop, desde que a condição seja verdadeira. Você coloca o código que deseja repetir entre chaves {}.
+
+
+exemplos:
+
+          void main() {
+            int i = 0;
+            while (i <= 100) {
+              if (i % 2 == 0) {
+                print(i);
+              }
+              i++;
+            }
+          }
+
+### Loop do-while:
+O loop do-while é semelhante ao while, mas ele garante que o conjunto de instruções seja executado pelo menos uma vez antes de verificar a condição.
+
+Sintaxe:
+            do {
+              // Código a ser executado pelo menos uma vez e repetido enquanto a condição for verdadeira
+            } while (condição);
+
+Exemplo:
+
+            void main(){
+              var num = 1;
+              do{
+                
+                print("$num");
+                num++;
+              }while(num <= 10);
+            }
+
+### loop for:
+
+O loop for é uma estrutura de repetição controlada por contador. Ele é usado quando você sabe quantas vezes deseja executar um conjunto de instruções.
+
+Sintaxe:
+
+          for (inicialização; condição; atualização) {
+            // Código a ser repetido enquanto a condição for verdadeira
+          }
+
+inicialização: Esta parte é executada uma vez, no início do loop. É usada para inicializar variáveis de controle. Você pode declarar e inicializar uma ou mais variáveis aqui.
+
+condição: A condição é uma expressão que é avaliada no início de cada iteração do loop. Enquanto a condição for verdadeira, o loop continuará a ser executado. Se a condição for falsa, o loop será encerrado.
+
+atualização: Esta parte é executada após cada iteração do loop. É usada para atualizar as variáveis de controle. Geralmente, você incrementa ou decrementa o valor de uma variável aqui.
+
+// Código a ser repetido enquanto a condição for verdadeira: Este é o bloco de código que será executado a cada iteração do loop, desde que a condição seja verdadeira. Você coloca o código que deseja repetir entre chaves {}.
+
+Exemplo:
+
+            void main(){
+              for(int i = 0; i <=10; i++ ){
+                for(int j = 10; j >= 0; j--){
+                  print("i: $i, j: $j" );
+              
+                }
+              }
+            }
