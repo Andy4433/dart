@@ -249,11 +249,107 @@ atualização: Esta parte é executada após cada iteração do loop. É usada p
 
 Exemplo:
 
-            void main(){
-              for(int i = 0; i <=10; i++ ){
-                for(int j = 10; j >= 0; j--){
-                  print("i: $i, j: $j" );
+          void main(){
+            for(int i = 0; i <=10; i++ ){
+              for(int j = 10; j >= 0; j--){
+                print("i: $i, j: $j" );
               
-                }
               }
             }
+          }
+
+## Funçoes:
+
+Funções em Dart são blocos de código que podem ser nomeados e reutilizados para executar uma tarefa específica. Elas são uma parte fundamental da programação e ajudam a organizar o código em unidades lógicas e reutilizáveis. Aqui estão os principais conceitos relacionados a funções em Dart:
+
+### Declaração de Função:
+
+Para declarar uma função em Dart, você usa a palavra-chave void (ou um tipo de retorno) seguida pelo nome da função, uma lista de parâmetros entre parênteses e um bloco de código entre chaves.
+
+          String saudacao(String nome) {
+            return "Olá, $nome!";
+          }
+
+Neste exemplo, a função saudacao recebe um parâmetro nome e retorna uma saudação como uma string.
+
+### Parâmetros:
+
+Parâmetros são valores que você passa para a função para que ela possa usá-los em sua lógica. Você pode ter zero, um ou mais parâmetros em uma função. Parâmetros podem ser obrigatórios ou opcionais, com valores padrão.
+
+          int soma(int a, int b) {
+            return a + b;
+          }
+
+### Tipo de Retorno:
+
+Uma função pode ter um tipo de retorno que define o tipo de valor que ela deve retornar quando é chamada. Se uma função não precisa retornar um valor, seu tipo de retorno é void.
+
+          String saudacao(String nome) {
+            return "Olá, $nome!";
+          }
+
+### Chamada de Função:
+
+Para chamar uma função em Dart, você usa seu nome seguido por parênteses que contêm os argumentos, se houver. Os valores passados nos argumentos são usados como valores dos parâmetros dentro da função.
+
+          String mensagem = saudacao("Alice");
+
+Neste exemplo, a função saudacao é chamada com o argumento "Alice", e o valor retornado é atribuído à variável mensagem.
+
+### Escopo de Variável:
+
+Variáveis declaradas dentro de uma função têm escopo local, o que significa que elas só são visíveis dentro da função. Variáveis declaradas fora da função têm escopo global e podem ser acessadas em todo o programa.
+
+          int global = 10;
+
+          void funcaoLocal() {
+            int local = 5;
+            print(local);  // Acesso a variável local
+            print(global); // Acesso a variável global
+          }
+
+## nullable
+
+Em Dart, você pode criar funções que aceitam parâmetros ou retornam valores nulos (null), o que é conhecido como "nullable." Isso é útil quando você deseja indicar que um valor pode ser nulo ou quando uma função pode ou não retornar um valor. Aqui estão algumas maneiras de criar funções que tratam valores nulos
+
+### Parâmetros Nulos:
+
+Você pode criar uma função que aceita parâmetros nulos especificando Tipo? para o tipo do parâmetro. Isso indica que o valor pode ser do tipo especificado ou nulo.
+
+          void funcaoComParametroNullable(String? nome) {
+            if (nome != null) {
+              print("Olá, $nome!");
+            } else {
+              print("Olá, visitante!");
+            }
+          }
+
+          void main() {
+            funcaoComParametroNullable("Alice");
+            funcaoComParametroNullable(null);
+          }
+
+Neste exemplo, a função funcaoComParametroNullable aceita um parâmetro nome, que pode ser uma String ou nulo.
+
+### Retorno Nulo:
+
+Você pode criar uma função que retorna um valor nulo especificando Tipo? como o tipo de retorno. Isso indica que a função pode retornar um valor do tipo especificado ou nulo.
+
+          int? funcaoQueRetornaNullable(bool condicao) {
+            if (condicao) {
+              return 42;
+            } else {
+              return null;
+            }
+          }
+
+          void main() {
+            int? resultado = funcaoQueRetornaNullable(true);
+            if (resultado != null) {
+              print("Resultado: $resultado");
+            } else {
+              print("Sem resultado.");
+            }
+          }
+
+Neste exemplo, a função funcaoQueRetornaNullable retorna um valor inteiro ou nulo com base em uma condição.

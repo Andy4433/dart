@@ -1,4 +1,5 @@
 void main() {
+  print("Tablas");
   var resultados = calculo(500, 46);
   espacos("-");
   print("Soma: ${resultados[0]}");
